@@ -17,7 +17,7 @@ app.use("/", postRoutes);
 const PORT = process.env.PORT || 8000;
 
 // DATABASE CONNECTION
-const dbUrl = "mongodb://Admin-01:KzLMZVt5orxXjpeV@cluster0-shard-00-00.u8ilw.mongodb.net:27017,cluster0-shard-00-01.u8ilw.mongodb.net:27017,cluster0-shard-00-02.u8ilw.mongodb.net:27017/ig-clone?ssl=true&replicaSet=atlas-lnj64l-shard-0&authSource=admin&retryWrites=true&w=majority"
+const dbUrl = process.env.DB_URL
 
 mongoose
   .connect(dbUrl, {
