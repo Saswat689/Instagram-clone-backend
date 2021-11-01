@@ -1,0 +1,55 @@
+Routes:
+1. Users Route
+Login - email,password
+register  - username,email,password
+get route for user profile
+all users can see other users profile
+userSchema: {
+    email,
+    password,
+    userImage,
+    username,
+    followers: [{username,userId}]
+    posts: [postId]
+}
+JWT
+{
+    userId,
+    username
+    userImage
+}
+ - upload profile picture
+ {
+     imageUrl
+ }
+
+2. POSTS Route
+create,update,delete and get all posts,get single post details
+object = {
+    imageUrl: "" // image of post,
+    user: username,
+    likes,
+    comments:[
+        {
+            user,
+            comment
+        }
+    ]
+}
+
+/post/:postId - GET route
+/posts - GET route
+
+/post/like/:postId - POST route
+/post/comment/:postId - POST route
+
+
+3. Follow up route
+ - array of followers of user
+
+/follow/:userId/name - POST 
+
+4. Image Post Route
+ - store image on disk storage
+
+5.
